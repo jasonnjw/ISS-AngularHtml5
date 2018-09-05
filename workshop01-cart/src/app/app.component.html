@@ -2,3 +2,14 @@
 
 <app-inventory (newLineItem)="processLineItem($event)"></app-inventory>
 
+<div *ngIf="cart.length <= 0">
+    <h2>Your cart is empty</h2>
+</div>
+<div *ngIf="cart.length > 0">
+    <h2>Your cart has {{ cart.length }} item(s)</h2>
+    <p *ngFor="let item of cart; let i = index">
+        {{item.label}}({{item.quantity}})
+    <button (click)="deleteItem(i)">Delete</button>
+    </p>
+</div>
+

@@ -41,7 +41,7 @@ export class InventoryComponent implements OnInit {
   }
 
  add(form : NgForm){
-   console.log("form: " + form.value);
+   console.log("form: " , form.value);
    //construct the payload
    const lineItem: LineItem = {
      label: this.selectedFruit,

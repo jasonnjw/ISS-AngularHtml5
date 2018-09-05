@@ -16,4 +16,10 @@ export class AppComponent {
     this.cart.push(lineItem);
     console.log("cart= ", this.cart);
   }
+
+  deleteItem(i : number){
+    console.log("index= ", i);
+    this.cart.splice(i,1);
+    console.log("cart= ", this.cart);
+  }
 }

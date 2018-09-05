@@ -3,7 +3,10 @@
     <tr>
       <td>
         <div>
-            <select name="fruitsList" (change)="displayFruit($event)" ngModel>
+          Items:
+        </div>
+         <div>
+            <select name="fruitsList" (change)="displayFruit($event)" required ngModel>
               <option *ngFor="let f of fruitsList; let i = index" [value]="i" >{{f.label}}</option>
             </select>
         </div>
@@ -15,9 +18,11 @@
           Quantity: 
         </div>
         <div>
-          <input type="number" name="quantity" min="1" ngModel>
+          <input type="number" name="quantity" min="1" required ngModel>
         </div>
-        <button type="submit">Add</button>
+        <div>
+          <button type="submit" [disabled]="inventoryForm.invalid">Add</button>
+        </div>
       </td>
     </tr>
   </table>
