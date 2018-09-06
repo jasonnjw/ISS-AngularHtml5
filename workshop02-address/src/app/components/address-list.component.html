@@ -1,7 +1,7 @@
 <mat-nav-list>
     <mat-list-item *ngFor="let a of addressess">
-      {{a.name | uppercase}}
-      {{a.phone}}
-      {{a.email}}
+        <p matLine><span class="name">{{a.name | uppercase}}</span></p>
+        <p matLine><span class="phone">{{a.phone}}</span></p>
+        <p matLine><span class="email">{{a.email}}</span></p>
     </mat-list-item>
-</mat-nav-list>
+</mat-nav-list> 

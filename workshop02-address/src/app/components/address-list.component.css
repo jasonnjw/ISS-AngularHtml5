@@ -1,0 +1,15 @@
+.name{
+    font-weight: bold;
+    font-size: 20px;
+    color:slateblue;
+}
+
+.phone{
+    font-weight: bold;
+    font-style: italic;
+    color: brown;
+}
+
+.email{
+    font-style: oblique;
+}
