@@ -1,0 +1,26 @@
+<form #contactForm="ngForm" (ngSubmit)="add(contactForm)" fxLayout="column" fxLayoutGap="15px">
+    <mat-form-field>
+        <input type="text" name="name" placeholder="Name:" required ngModel matInput>
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" name="phone" placeholder="Phone:" required ngModel minlength="8" matInput>
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" name="email" placeholder="Email:" required ngModel email matInput>
+     </mat-form-field>
+     <mat-form-field>
+        <input type="text" name="address" placeholder="Address:" required ngModel matInput>
+    </mat-form-field>
+
+<div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px">
+    <button type="reset" mat-raised-button color="accent">
+        <mat-icon>clear</mat-icon>    
+        Reset
+    </button>
+    <button type="submit" [disabled]="contactForm.invalid" mat-raised-button color="primary">
+        <mat-icon>favorite</mat-icon>    
+        Add
+    </button>
+</div>
+
+</form>
