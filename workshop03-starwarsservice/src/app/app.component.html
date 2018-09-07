@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+StarWars Lucky Index
+</mat-toolbar>
+
+<form #searchForm="ngForm" (ngSubmit)="search(searchForm)" fxLayout="column" fxLayoutGap="15px">
+  <mat-form-field>
+    <mat-select placeholder="Which category do you like to search?" [(ngModel)]="categoryValue" name="category" required>
+      <mat-option *ngFor="let c of categories" [value]="c">
+        {{c.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+      <input type="number" name="number" placeholder="What is your lucky number?"
+      min="1" max="20" required ngModel matInput>
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px">
+      <button type="reset" mat-raised-button color="accent">
+          <mat-icon>clear</mat-icon>    
+          Reset
+      </button>
+      <button type="submit" [disabled]="searchForm.invalid" mat-raised-button color="primary">
+          <mat-icon>search</mat-icon>    
+      </button>
+  </div>
+</form>
+
+<div *ngIf="dataResult.length <= 0">
+    <h2>No Results found</h2>
+</div>
+<div *ngIf="dataResult.length > 0">
+    <h2>Your luck results: </h2>
+    <div>
+        <img src={{dataResult.image}}>
+    </div>
+    {{dataResult.image}}
+</div>
