@@ -18,7 +18,7 @@ export class CardComponent implements OnInit {
 
   canShare = false;
 
-  dataResult : Model = {} as any;
+  dataResult : any = {} as any;
 
   ngOnInit() {
     this.canShare = !!navigator['share'];

@@ -28,7 +28,7 @@ export class SearchComponent implements OnInit {
 
   private redirect : boolean = false;
 
-  private categories : any = [
+  categories : any = [
     { label: 'Planets', value:'planets', imageSrc:'planets' },
     { label: 'Starships', value:'starships', imageSrc:'starships' },
     { label: 'Vehicles', value:'vehicles', imageSrc:'vehicles' },

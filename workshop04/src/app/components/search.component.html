@@ -4,7 +4,7 @@
         Lucky Search
     </div>
     <mat-form-field>
-    <mat-select placeholder="Which category do you like to search?" [(ngModel)]="categoryValue" name="category" required>
+    <mat-select placeholder="Which category do you like to search?" name="category" required>
         <mat-option *ngFor="let c of categories" [value]="c">
         {{c.label}}
         </mat-option>

@@ -12,7 +12,7 @@ import { StarWarsStorageService } from '../starwarsstorage.service';
 })
 export class ModelComponent implements OnInit {
 
-private categories : any = [
+categories : any = [
     { label: 'Planets', value:'planets', imageSrc:'planets' },
     { label: 'Starships', value:'starships', imageSrc:'starships' },
     { label: 'Vehicles', value:'vehicles', imageSrc:'vehicles' },
