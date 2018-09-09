@@ -40,6 +40,7 @@ export class SearchComponent implements OnInit {
   dataResult : Model = {} as any;
 
   search(form : NgForm){
+    console.log("form value", form);
     switch (form.value.category.value) {
       case 'planets':
           this.dataResult =  {} as Planet;
