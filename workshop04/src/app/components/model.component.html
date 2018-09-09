@@ -1,0 +1,15 @@
+<mat-tab-group (selectedTabChange)="loadData($event)">
+    <mat-tab *ngFor='let c of categories' [label]='c.label'>
+        <mat-nav-list>
+            <!-- <h2 mat-subheader>{{c.label}}</h2> -->
+              <a *ngFor ="let d of allData"
+                (click)='redirectToCard(d.category, d.id)' mat-list-item>
+                {{d.name}}{{d.title}}
+                </a>
+          </mat-nav-list>
+    </mat-tab>
+</mat-tab-group>
+
+
+
+

@@ -26,13 +26,13 @@ StarWars Lucky Index
   </div>
 </form>
 
-<div *ngIf="dataResult.length <= 0">
-    <h2>No Results found</h2>
-</div>
-<div *ngIf="dataResult.length > 0">
-    <h2>Your luck results: </h2>
-    <div>
-        <img src={{dataResult.image}}>
+<div *ngIf="dataResult?.length <=0 ">
+        <h2>No Results found</h2>
     </div>
-    {{dataResult.image}}
-</div>
+    <div *ngIf="dataResult?.length > 0">
+        <h2>Your luck results: </h2>
+        <div>
+            <img src={{dataResult.image}}>
+        </div>
+        {{dataResult.image}}
+    </div>

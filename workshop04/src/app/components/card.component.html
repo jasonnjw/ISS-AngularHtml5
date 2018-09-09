@@ -1,0 +1,130 @@
+<mat-card class="card" (swiperight)="redirectToRoot()">
+  <mat-card-header>
+      <mat-card-title class="cardHeader">{{dataResult?.name}}{{dataResult?.title}}</mat-card-title>
+  </mat-card-header>
+      <img mat-card-image [src]="dataResult?.image">
+        <mat-card-content>
+            <span [ngClass]="(dataResult?.category != 'people') ? 'hidden':'text'">
+                Name: {{dataResult?.name}}
+                <br />
+                Gender: {{dataResult.gender}}
+                <br />
+                Height: {{dataResult?.height}}
+                <br />
+                Mass: {{dataResult?.mass}}
+                <br />
+                Birth Year: {{dataResult?.birth_year}}
+                <br />
+                Eye Color: {{dataResult?.eye_color}}
+                <br />
+                Hair Color: {{dataResult.hair_color}}
+                <br />
+                Skin Color: {{dataResult?.skin_color}}
+            </span>
+            <span [ngClass]="(dataResult?.category != 'planets') ? 'hidden':'text'">
+                Name: {{dataResult?.name}}
+                <br />
+                Diameter: {{dataResult.diameter}}
+                <br />
+                Rotation Period: {{dataResult?.rotation_period}}
+                <br />
+                Orbital Period: {{dataResult?.orbital_period}}
+                <br />
+                Population: {{dataResult?.population}}
+                <br />
+                Climate: {{dataResult?.climate}}
+                    <br />
+                Terrain: {{dataResult?.terrain}}
+                <br />
+                Surface Water: {{dataResult?.surface_water}}
+            </span>
+            <span [ngClass]="(dataResult?.category != 'starships') ? 'hidden':'text'">
+                Name: {{dataResult?.name}}
+                <br />
+                Model: {{dataResult.model}}
+                <br />
+                Starship Class: {{dataResult?.starship_class}}
+                <br />
+                Manufacturer: {{dataResult?.manufacturer}}
+                <br />
+                Cost In Credits: {{dataResult.cost_in_credits}}
+                <br />
+                Crew: {{dataResult?.crew}}
+                <br />
+                Length: {{dataResult?.length}}
+                <br />
+                Passengers: {{dataResult?.passengers}}
+                <br />
+                Max Atmosphering Speed: {{dataResult?.max_atmosphering_speed}}
+                <br />
+                Hyperdrive Rating: {{dataResult?.hyperdrive_rating}}
+                <br />
+                MGLT: {{dataResult?.MGLT}}
+                <br />
+                Cargo Capacity: {{dataResult?.cargo_capacity}}
+                <br />
+                Consumables: {{dataResult?.consumables}}
+            </span>
+            <span [ngClass]="(dataResult?.category != 'vehicles') ? 'hidden':'text'">
+                Name: {{dataResult?.name}}
+                <br />
+                Model: {{dataResult.model}}
+                <br />
+                Vehicle Class: {{dataResult?.vehicle_class}}
+                <br />
+                Manufacturer: {{dataResult?.manufacturer}}
+                <br />
+                Cost In Credits: {{dataResult.cost_in_credits}}
+                <br />
+                Crew: {{dataResult?.crew}}
+                <br />
+                Length: {{dataResult?.length}}
+                <br />
+                Passengers: {{dataResult?.passengers}}
+                <br />
+                Max Atmosphering Speed: {{dataResult?.max_atmosphering_speed}}
+                <br />
+                Cargo Capacity: {{dataResult?.cargo_capacity}}
+                <br />
+                Consumables: {{dataResult?.consumables}}
+            </span>
+            <span [ngClass]="(dataResult?.category != 'films') ? 'hidden':'text'">
+                Title: {{dataResult?.title}}
+                <br />
+                Episode Id: {{dataResult.episode_id}}
+                <br />
+                Opening Crawl: {{dataResult?.opening_crawl}}
+                <br />
+                Director: {{dataResult?.director}}
+                <br />
+                Producer: {{dataResult?.producer}}
+                <br />
+                Release Date: {{dataResult?.release_date}}
+            </span>
+            <span [ngClass]="(dataResult?.category != 'species') ? 'hidden':'text'">
+                Name: {{dataResult?.name}}
+                <br />
+                Classification: {{dataResult.classification}}
+                <br />
+                Designation: {{dataResult?.designation}}
+                <br />
+                Average Height: {{dataResult?.average_height}}
+                <br />
+                Average Lifespan: {{dataResult?.average_lifespan}}
+                <br />
+                Eye Colors: {{dataResult?.eye_colors}}
+                <br />
+                Hair Colors: {{dataResult.hair_colors}}
+                <br />
+                Skin Colors: {{dataResult?.skin_colors}}
+                <br />
+                Language: {{dataResult?.language}}
+            </span>
+        </mat-card-content>
+    <mat-card-actions fxLayoutAlign="end">
+        <button type="button" mat-icon-button color="primary" [disabled]="!canShare"
+            (click)="share()">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>
